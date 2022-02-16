@@ -58,5 +58,31 @@ namespace GrammarStudy
 
             Console.WriteLine(json2);
         }
+
+        public static bool GetMsg_type(string input, out string msg_type)
+        {
+            msg_type = "";
+            try
+            {
+                var rootNode = JsonConvert.DeserializeXmlNode(input,"root");
+                if (null == rootNode)
+                {
+                    return false;
+                }
+                var msgTypeNode = rootNode.SelectSingleNode("/root/msg_type");
+                if (null == msgTypeNode)
+                {
+                    return false;
+                }
+                msg_type = msgTypeNode.InnerText;
+            }
+            catch (Exception ex)
+            {
+                LogHelp.logger.Info("GetMsg_type ex={0} input={1}", ex.Message, input);
+                return false;
+            }
+
+            return true;
+        }
     }
 }

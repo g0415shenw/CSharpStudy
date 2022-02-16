@@ -11,7 +11,7 @@ namespace kafkaConsumer
         static void Main(string[] args)
         {
             Consumer consumer = new Consumer();
-            consumer.Init("10.0.42.12:33039");
+            consumer.Init("192.168.31.229:9092","NBG");
             consumer.SetToEnd();
             consumer.GetMsg();
 
