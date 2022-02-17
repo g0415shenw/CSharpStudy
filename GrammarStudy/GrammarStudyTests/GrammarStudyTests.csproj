@@ -66,10 +66,14 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="HttpClientTestTests.cs" />
     <Compile Include="JsonToClassTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
