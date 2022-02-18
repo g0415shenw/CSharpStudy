@@ -66,6 +66,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="CsvReaderTests.cs" />
     <Compile Include="HttpClientTestTests.cs" />
     <Compile Include="JsonToClassTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +76,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="zuobiao.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GrammarStudy\GrammarStudy.csproj">
